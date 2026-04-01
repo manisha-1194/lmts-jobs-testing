@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMT JOBS | Premium Job Portal & Preparation</title>
+    <meta name="description" content="LMT JOBS: All-in-one platform for job search and interview preparation. Master DSA, Aptitude, and Technical concepts.">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+</head>
+<body>
+    <header class="glass">
+        <div class="logo">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="url(#logo-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 17L12 22L22 17" stroke="url(#logo-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 12L12 17L22 12" stroke="url(#logo-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                    <linearGradient id="logo-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="var(--primary)" />
+                        <stop offset="1" stop-color="var(--secondary)" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            LMT JOBS
+        </div>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a id="nav-home" href="#" class="active" onclick="navigate('home')">Home</a></li>
+                    <li><a id="nav-jobs" href="#" onclick="navigate('jobs')">Jobs</a></li>
+                    <li><a id="nav-prep" href="#" onclick="navigate('prep')">Preparation</a></li>
+                    <li><a id="nav-companies" href="#" onclick="navigate('companies')">Companies</a></li>
+                    <li><a id="nav-dsa" href="#" onclick="navigate('dsa')">DSA Sheet</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle" title="Toggle Light/Dark Mode">
+                🌙
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="floating" style="width: 300px; height: 300px; top: 10%; left: 5%; background: var(--primary);"></div>
+            <div class="floating" style="width: 250px; height: 250px; bottom: 10%; right: 5%; background: var(--secondary);"></div>
+            
+            <div class="hero">
+                <h1>Elevate Your Career with <span class="gradient-text">Precision</span></h1>
+                <p>The ultimate destination for tech enthusiasts to find dream jobs and master every interview round with our curated preparation kits.</p>
+                
+                <div class="search-container">
+                    <input type="text" class="search-bar" placeholder="Search for jobs, companies or topics...">
+                    <button class="search-btn">Quick Search</button>
+                </div>
+            </div>
+
+            <div class="sections-grid">
+                <div class="glass-card section-card">
+                    <div class="icon-box">💼</div>
+                    <h3>Job Portal</h3>
+                    <p>Access thousands of curated job listings from top startups and Fortune 500 companies.</p>
+                    <button class="btn-secondary" onclick="navigate('jobs')">Browse Jobs</button>
+                </div>
+                <div class="glass-card section-card">
+                    <div class="icon-box">🧠</div>
+                    <h3>Preparation Hub</h3>
+                    <p>Master Aptitude, DSA, and Core Technical concepts with our comprehensive notes.</p>
+                    <button class="btn-secondary" onclick="navigate('prep')">Star Learning</button>
+                </div>
+                <div class="glass-card section-card">
+                    <div class="icon-box">🏢</div>
+                    <h3>Company Insights</h3>
+                    <p>Detailed hiring patterns, syllabus, and eligibility criteria for over 500+ tech giants.</p>
+                    <button class="btn-secondary" onclick="navigate('companies')">Explore Companies</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jobs Page -->
+        <section id="jobs" class="page">
+            <div style="padding: 40px 5%;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Discover <span class="gradient-text">Opportunities</span></h2>
+                <div id="jobs-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.5rem;">
+                    <!-- Dynamically Rendered -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Preparation Page -->
+        <section id="prep" class="page">
+            <div style="padding: 40px 5%;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Master Every <span class="gradient-text">Concept</span></h2>
+                <p style="color: var(--text-dim); margin-bottom: 2.5rem;">Structured learning paths to take you from beginner to interview-ready.</p>
+                <div id="prep-grid" class="sections-grid" style="padding: 0;">
+                    <!-- Dynamically Rendered -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Companies Page -->
+        <section id="companies" class="page">
+            <div style="padding: 40px 5%;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Know Your <span class="gradient-text">Targets</span></h2>
+                <div id="companies-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem;">
+                    <!-- Dynamically Rendered -->
+                </div>
+            </div>
+        </section>
+
+        <!-- DSA Sheet Page -->
+        <section id="dsa" class="page">
+            <div style="padding: 40px 5%; max-width: 1200px; margin: 0 auto;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;">
+                    <div>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem;">DSA Mastery <span class="gradient-text">Sheet</span></h2>
+                        <p style="color: var(--text-dim);">The only roadmap you need to crack FAANG+ interviews.</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <p style="font-size: 1.2rem; font-weight: 600; color: var(--primary);">Progress: 0%</p>
+                        <div style="width: 200px; height: 8px; background: rgba(255,255,255,0.1); border-radius: 10px; margin-top: 8px; overflow: hidden;">
+                            <div style="width: 0%; height: 100%; background: var(--primary);"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card" style="padding: 0; overflow-x: auto;">
+                    <table class="dsa-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Topic</th>
+                                <th>Problems</th>
+                                <th>Difficulty</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dsa-sheet-body">
+                            <!-- Dynamically Rendered -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">LMT JOBS</div>
+                <p style="color: var(--text-dim); margin-top: 1rem;">Empowering the next generation of tech talent through structured learning and career opportunities.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">DSA Guide</a></li>
+                    <li><a href="#">System Design</a></li>
+                    <li><a href="#">Behavioral Prep</a></li>
+                    <li><a href="#">Resume Builder</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 60px; color: var(--text-dim); font-size: 0.9rem;">
+            &copy; 2026 LMT JOBS. All rights reserved.
+        </div>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
