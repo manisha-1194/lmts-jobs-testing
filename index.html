@@ -6,8 +6,8 @@
     <title>LMT JOBS | Premium Job Portal & Preparation</title>
     <meta name="description" content="LMT JOBS: All-in-one platform for job search and interview preparation. Master DSA, Aptitude, and Technical concepts.">
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <script type="module" crossorigin src="/lmts-jobs-testing/assets/index-VGVaWeuQ.js"></script>
-  <link rel="stylesheet" crossorigin href="/lmts-jobs-testing/assets/index-Dt9T1hTI.css">
+  <script type="module" crossorigin src="/lmts-jobs-testing/assets/index-Do2TpCOP.js"></script>
+  <link rel="stylesheet" crossorigin href="/lmts-jobs-testing/assets/index-D3mt23ZK.css">
 </head>
 <body>
     <header class="glass">
@@ -25,19 +25,18 @@
             </svg>
             LMT JOBS
         </div>
-        <div class="nav-container">
-            <nav>
-                <ul>
-                    <li><a id="nav-home" href="#" class="active" onclick="navigate('home')">Home</a></li>
-                    <li><a id="nav-jobs" href="#" onclick="navigate('jobs')">Jobs</a></li>
-                    <li><a id="nav-prep" href="#" onclick="navigate('prep')">Preparation</a></li>
-                    <li><a id="nav-companies" href="#" onclick="navigate('companies')">Companies</a></li>
-                    <li><a id="nav-dsa" href="#" onclick="navigate('dsa')">DSA Sheet</a></li>
-                </ul>
-            </nav>
-            <button id="theme-toggle" class="theme-toggle" title="Toggle Light/Dark Mode">
-                🌙
-            </button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#" onclick="navigate('home')">Home</a></li>
+                <li><a href="#" onclick="navigate('jobs')">Jobs</a></li>
+                <li><a href="#" onclick="navigate('prep')">Preparation</a></li>
+                <li><a href="#" onclick="navigate('companies')">Companies</a></li>
+                <li><a href="#" onclick="navigate('dsa')">DSA Sheet</a></li>
+            </ul>
+        </nav>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <button class="theme-toggle" id="theme-toggle">🌙</button>
+            <button class="menu-toggle" id="menu-toggle">☰</button>
         </div>
     </header>
 
